@@ -17,10 +17,10 @@ export default function Input(props) {
 
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Search for a location" onChange={handleInputChange} type="text"/>
-                <button type="submit">Search</button>
+        <div className="weather-input">
+            <form className="weather-input-form" onSubmit={handleSubmit}>
+                <input className="weather-input-el" placeholder="Search for a location" onChange={handleInputChange} type="text"/>
+                <button className="weather-input-btn" type="submit">Search</button>
             </form>
         </div>
     )
