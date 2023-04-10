@@ -3,42 +3,49 @@
 
 .App {
     .weather-input {
-        width: 100%; 
-        background: $background-color;
+        width: 100%;
         padding: 2em;
 
         .weather-input-form {
             display: flex;
             align-items: center;
             width: 100%;
-            gap: 3px;
             justify-content: center;
+            max-width: 400px;
+            margin: 0 auto;
+            background: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 30px;
 
             .weather-input-el {
-                padding: 0.5rem;
-                border: 1px solid #ccc;
-                border-radius: 5px;
+                padding: 0.6rem 1em;
+                border: none;
                 font-size: 1rem;
-                width: 50%;
-                max-width: 400px;
                 font-family: $font-family;
+                outline: none;
+                background: none;
+                width: 85%;
+
+                &::placeholder {
+                    color: white;
+                }
 
             } // Weather Input
 
             .weather-input-btn {
-                background-color: $section-color;
+                background: none;
                 color: white;
-                padding: 0.5rem 1rem;
-                border: 1px solid $section-color;
-                border-radius: 5px;
+                padding: 0.6rem;
+                border: none;
                 font-size: 1rem;
+                width: 15%;
                 transition: background-color 0.3s ease;
                 cursor: pointer;
 
-                &:hover {
-                    background-color: #0D47A1;
-                    border: 1px solid #0D47A1;
-                } // Weather Input Button Hover
+                ion-icon {
+                    font-size: 1.4rem;
+                }
+
             } // Weather Input Button
         } // Weather Input Form
     } // Weather Input
