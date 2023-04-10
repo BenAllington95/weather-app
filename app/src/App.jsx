@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Input from './Input'
+import WeatherSection from './WeatherSection'
 
 import './scss/main.css'
 
@@ -8,7 +9,7 @@ function App() {
 
   const [api, setApi] = useState( {
     apiKey: "7fb07433f8df41309b4181720230604",
-    location: "Hong Kong"
+    location: ""
   })
 
   const [data, setData] = useState([])
@@ -39,7 +40,12 @@ function App() {
     <div className="App">
       <Input 
       setApi={setApi}
-      setIsSubmitted={setIsSubmitted}/>
+      setIsSubmitted={setIsSubmitted}
+      />
+      <WeatherSection
+      data={data}
+      />
+      
     </div>
   )
 }
