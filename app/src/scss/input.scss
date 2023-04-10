@@ -4,7 +4,7 @@
 .App {
     .weather-input {
         width: 100%;
-        padding: 2em;
+        padding-top: 2em;
 
         .weather-input-form {
             display: flex;
@@ -13,8 +13,7 @@
             justify-content: center;
             max-width: 400px;
             margin: 0 auto;
-            background: #ccc;
-            border: 1px solid #ccc;
+            background: #005c96;
             border-radius: 30px;
 
             .weather-input-el {
