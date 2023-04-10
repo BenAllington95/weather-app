@@ -26,10 +26,10 @@
             } // Weather Input
 
             .weather-input-btn {
-                background-color: #2196F3;
+                background-color: $section-color;
                 color: white;
                 padding: 0.5rem 1rem;
-                border: 1px solid #2196F3;
+                border: 1px solid $section-color;
                 border-radius: 5px;
                 font-size: 1rem;
                 transition: background-color 0.3s ease;

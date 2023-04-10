@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+.App {
+    .weather-data-section {
+        background: $section-color;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 7.5px;
+        padding: $section-padding;
+        color: $background-color;
+        max-width: $max-width;
+
+        .weather-data-location {
+            font-size: 2.5rem;
+        }
+    }
+}

@@ -18,9 +18,11 @@ export default function Input(props) {
 
     return (
         <div className="weather-input">
-            <form className="weather-input-form" onSubmit={handleSubmit}>
+            <form 
+            className="weather-input-form" 
+            onSubmit={handleSubmit}>
                 <input value={input} className="weather-input-el" placeholder="Search for a location" onChange={handleInputChange} type="text"/>
-                <button className="weather-input-btn" type="submit">Search</button>
+                <button className="weather-input-btn" type="submit"><ion-icon name="search-sharp"></ion-icon></button>
             </form>
         </div>
     )

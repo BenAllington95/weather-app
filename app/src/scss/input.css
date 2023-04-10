@@ -20,10 +20,10 @@
   font-family: "Montserrat", sans-serif;
 }
 .App .weather-input .weather-input-form .weather-input-btn {
-  background-color: #2196F3;
+  background-color: #0077be;
   color: white;
   padding: 0.5rem 1rem;
-  border: 1px solid #2196F3;
+  border: 1px solid #0077be;
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
