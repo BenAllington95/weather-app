@@ -12,6 +12,7 @@
 
         .weather-data-location {
             display: flex;
+            justify-content: center;
             width: 100%;
             align-items: baseline;
             
@@ -25,12 +26,17 @@
                 color: lightgray;
                 font-weight: bold;
             }
+        }
 
+        .weather-data-temperature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
 
         .weather-data-img {
-            width: 60px;
+            width: 50px;
         }
     }
 }

@@ -8,8 +8,13 @@ export default function WeatherSection(props) {
                 <p>{props.data.country}</p>
             </div>
 
+            <div className="weather-data-temperature">
+                <img className="weather-data-img" src={props.data.icon} />
+                <h2>{Math.round(props.data.celsius)} °C | °F</h2>
+            </div>
 
-            <img className="weather-data-img" src={props.data.icon} />
+
+            
         </div>
     )
 }

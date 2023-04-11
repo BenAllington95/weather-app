@@ -9,6 +9,7 @@
 }
 .App .weather-data-section .weather-data-location {
   display: flex;
+  justify-content: center;
   width: 100%;
   align-items: baseline;
 }
@@ -21,6 +22,11 @@
   color: lightgray;
   font-weight: bold;
 }
+.App .weather-data-section .weather-data-temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .App .weather-data-section .weather-data-img {
-  width: 60px;
+  width: 50px;
 }/*# sourceMappingURL=weatherSection.css.map */
