@@ -11,7 +11,26 @@
         max-width: $max-width;
 
         .weather-data-location {
-            font-size: 2.5rem;
+            display: flex;
+            width: 100%;
+            align-items: baseline;
+            
+            .weather-data-location-title {
+                font-size: 2.5rem;
+                margin-right: 0.1em;
+            }
+
+            p {
+                font-size: 1.4rem;
+                color: lightgray;
+                font-weight: bold;
+            }
+
+        }
+
+
+        .weather-data-img {
+            width: 60px;
         }
     }
 }
