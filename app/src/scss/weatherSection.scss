@@ -26,12 +26,18 @@
                 color: lightgray;
                 font-weight: bold;
             }
+
         }
 
         .weather-data-temperature {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            span {
+                cursor: pointer;
+            }
+
         }
 
 

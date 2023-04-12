@@ -11,7 +11,8 @@ export default function Input(props) {
      function handleSubmit(e) {
        e.preventDefault()
        props.setApi(prevState => ({...prevState, location: input}))
-       props.setIsSubmitted(prevState => !prevState)
+       props.setIsSubmitted(true)
+       props.setCount(prevCount => prevCount + 1)
        setInput("")
      }
 

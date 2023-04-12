@@ -14,6 +14,7 @@ function App() {
 
   const [data, setData] = useState([])
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [count, setCount] = useState(0)
     
     
     useEffect(() => {
@@ -31,20 +32,24 @@ function App() {
           weatherText: data.current.condition.text,
           icon: data.current.condition.icon,
         }))
-      }, [isSubmitted]) 
-
-      console.log(data)
+      }, [count]) 
       
+      
+      console.log(count)
 
   return (
     <div className="App">
       <Input 
       setApi={setApi}
       setIsSubmitted={setIsSubmitted}
+      setCount={setCount}
       />
-      <WeatherSection
-      data={data}
-      />
+
+      {isSubmitted &&
+        <WeatherSection
+        data={data}
+        />
+      }
       
     </div>
   )
