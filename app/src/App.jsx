@@ -12,9 +12,9 @@ function App() {
     location: ""
   })
 
-  const [data, setData] = useState([])
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState([]) // to store the API Data which is altered into a readable format
+  const [isSubmitted, setIsSubmitted] = useState(false) // When true, the weatherSection will appear
+  const [count, setCount] = useState(0) // to control the api hook
     
     
     useEffect(() => {
@@ -34,9 +34,6 @@ function App() {
         }))
       }, [count]) 
       
-      
-      console.log(count)
-
   return (
     <div className="App">
       <Input 
