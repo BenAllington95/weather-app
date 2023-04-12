@@ -1,6 +1,8 @@
 
 @import './variables.scss';
 
+$input-border-radius: 30px;
+
 .App {
     .weather-input {
         width: 100%;
@@ -13,20 +15,28 @@
             justify-content: center;
             max-width: 400px;
             margin: 0 auto;
-            background: #005c96;
-            border-radius: 30px;
+            border-radius: $input-border-radius;
+            background: #005d92;
+            transition: all 0.2s;
 
     
 
             .weather-input-el {
-                padding: 0.6rem 1em;
+                padding: 1em;
                 border: none;
                 font-size: 1rem;
                 font-family: $font-family;
                 outline: none;
                 background: none;
                 width: 85%;
-                color: #fff;
+                color: #005d92;
+                border-top-left-radius: $input-border-radius;
+                border-bottom-left-radius: $input-border-radius;
+
+                &:focus {
+                    background: white;
+                    transition: all 0.2s;
+                }              
 
                 &::placeholder {
                     color: lightgrey;
@@ -39,15 +49,17 @@
             .weather-input-btn {
                 background: none;
                 color: white;
-                padding: 0.6rem;
+                padding: 1em 0;
                 border: none;
                 font-size: 1rem;
                 width: 15%;
                 transition: background-color 0.3s ease;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
                 cursor: pointer;
 
                 ion-icon {
-                    font-size: 1.4rem;
+                    font-size: 1em;
                 }
             } // Weather Input Button
         } // Weather Input Form

@@ -9,18 +9,25 @@
   justify-content: center;
   max-width: 400px;
   margin: 0 auto;
-  background: #005c96;
   border-radius: 30px;
+  background: #005d92;
+  transition: all 0.2s;
 }
 .App .weather-input .weather-input-form .weather-input-el {
-  padding: 0.6rem 1em;
+  padding: 1em;
   border: none;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   outline: none;
   background: none;
   width: 85%;
-  color: #fff;
+  color: #005d92;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.App .weather-input .weather-input-form .weather-input-el:focus {
+  background: white;
+  transition: all 0.2s;
 }
 .App .weather-input .weather-input-form .weather-input-el::-moz-placeholder {
   color: lightgrey;
@@ -31,15 +38,17 @@
 .App .weather-input .weather-input-form .weather-input-btn {
   background: none;
   color: white;
-  padding: 0.6rem;
+  padding: 1em 0;
   border: none;
   font-size: 1rem;
   width: 15%;
   transition: background-color 0.3s ease;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   cursor: pointer;
 }
 .App .weather-input .weather-input-form .weather-input-btn ion-icon {
-  font-size: 1.4rem;
+  font-size: 1em;
 }
 
 @media (max-width: 462px) {
