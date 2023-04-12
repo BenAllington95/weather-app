@@ -16,6 +16,8 @@
             background: #005c96;
             border-radius: 30px;
 
+    
+
             .weather-input-el {
                 padding: 0.6rem 1em;
                 border: none;
@@ -24,10 +26,13 @@
                 outline: none;
                 background: none;
                 width: 85%;
+                color: #fff;
 
                 &::placeholder {
-                    color: white;
+                    color: lightgrey;
                 }
+
+        
 
             } // Weather Input
 
@@ -44,7 +49,6 @@
                 ion-icon {
                     font-size: 1.4rem;
                 }
-
             } // Weather Input Button
         } // Weather Input Form
     } // Weather Input
