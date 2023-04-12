@@ -13,6 +13,7 @@
         .weather-data-location {
             display: flex;
             justify-content: center;
+            gap: 5px;
             width: 100%;
             align-items: baseline;
             
@@ -31,11 +32,26 @@
 
         .weather-data-temperature {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            padding: $section-padding;
+
 
             span {
                 cursor: pointer;
+            }
+
+            .weather-data-temperature-value {
+                font-size: 2rem;
+            }
+
+
+            .weather-data-unit-section {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-left: 0.7em;
+                font-size: 1.2rem;
             }
 
         }

@@ -66,6 +66,7 @@
 .App .weather-data-section .weather-data-location {
   display: flex;
   justify-content: center;
+  gap: 5px;
   width: 100%;
   align-items: baseline;
 }
@@ -80,11 +81,22 @@
 }
 .App .weather-data-section .weather-data-temperature {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 2em;
 }
 .App .weather-data-section .weather-data-temperature span {
   cursor: pointer;
+}
+.App .weather-data-section .weather-data-temperature .weather-data-temperature-value {
+  font-size: 2rem;
+}
+.App .weather-data-section .weather-data-temperature .weather-data-unit-section {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 0.7em;
+  font-size: 1.2rem;
 }
 .App .weather-data-section .weather-data-img {
   width: 50px;
@@ -101,6 +113,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1, p {
+h1, p, h2 {
   margin: 0;
 }/*# sourceMappingURL=main.css.map */

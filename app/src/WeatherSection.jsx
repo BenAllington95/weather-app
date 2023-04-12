@@ -26,13 +26,17 @@ export default function WeatherSection(props) {
         <div className="weather-data-section">
 
             <div className="weather-data-location">
-                <h1 className="weather-data-location-title">{props.data.name}</h1>
+                <h1 className="weather-data-location-title">{props.data.name}, </h1>
                 <p>{props.data.country}</p>
             </div>
 
             <div className="weather-data-temperature">
                 <img className="weather-data-img" src={props.data.icon} />
-                <h2>{Math.round(isCelsius ? props.data.celsius : props.data.fahrenheit)} <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span> | <span style={fahrenheitStyle} onClick={handleTemperature} id="fahrenheit-id">°F</span></h2>
+                <h2 className="weather-data-temperature-value">{Math.round(isCelsius ? props.data.celsius : props.data.fahrenheit)}</h2>
+                <div className="weather-data-unit-section">
+                    <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span>
+                    <span style={fahrenheitStyle} onClick={handleTemperature} id="fahrenheit-id">°F</span>
+                </div>
             </div>
 
 
