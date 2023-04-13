@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import WeatherInfo from './WeatherInfo';
 
 export default function WeatherSection(props) {
 
@@ -42,6 +43,9 @@ export default function WeatherSection(props) {
                     <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span>
                     <span style={fahrenheitStyle} onClick={handleTemperature} id="fahrenheit-id">°F</span>
                 </div>
+            <WeatherInfo 
+            data={props.data}
+            />
             </div>
 
 
