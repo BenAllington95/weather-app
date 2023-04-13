@@ -15,15 +15,19 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
             
-            p {
-                width: 35%;
+            .weather-info-item {
                 text-align: center;
                 padding: 1em;
+                width: 20%;
                 background: #fff;
                 border-radius: 7.5px;
                 color: $section-color;
+
+                h3 {
+                    font-size: 2rem;
+                }
             }
         }
 

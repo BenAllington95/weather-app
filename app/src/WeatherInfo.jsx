@@ -26,12 +26,28 @@ function WeatherInfo(props) {
 
   return (
     <div className="weather-info-section">
-    <p>Humidity: {props.data.humidity}%</p>
-    <p>Feels Like: {tempConversion(props.isCelsius, props.data.feelsLike)}</p>
-    <p>Min: {tempConversion(props.isCelsius, props.data.minTemp)}</p>
-    <p>Max: {tempConversion(props.isCelsius, props.data.maxTemp)}</p>
+        <div className="weather-info-item">
+            <p>Humidity</p>
+            <h3>{props.data.humidity}%</h3>
+        </div>
+        <div className="weather-info-item">
+            <p>Feels Like</p>
+            <h3>{tempConversion(props.isCelsius, props.data.feelsLike)}</h3>
+        </div>
+        <div className="weather-info-item">
+            <p>Min</p>
+            <h3>{tempConversion(props.isCelsius, props.data.minTemp)}</h3>
+        </div>
+        <div className="weather-info-item">
+            <p>Max</p>
+            <h3>{tempConversion(props.isCelsius, props.data.maxTemp)}</h3>
+        </div>
     </div>
   );
 }
+
+// <p>Feels Like {tempConversion(props.isCelsius, props.data.feelsLike)}</p>
+// <p>Min {tempConversion(props.isCelsius, props.data.minTemp)}</p>
+// <p>Max {tempConversion(props.isCelsius, props.data.maxTemp)}</p>
 
 export default WeatherInfo;
