@@ -29,6 +29,15 @@ export default function WeatherSection(props) {
         return fahrenheit;
       }
 
+    const imageStyle = {
+        backgroundImage: `url(https://openweathermap.org/img/wn/${props.data.icon}@4x.png)`,
+        width: `100px`,
+        height: `100px`,
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+    }
+
     return (
         <div className="weather-data-section">
 
@@ -38,7 +47,7 @@ export default function WeatherSection(props) {
             </div>
 
             <div className="weather-data-temperature">
-                <img className="weather-data-img" src={`https://openweathermap.org/img/wn/${props.data.icon}@4x.png`} alt="Weather icon" />
+                <img className="weather-data-img" src={`https://openweathermap.org/img/wn/${props.data.icon}@4x.png`} alt="Weather-icon" />
                 <div className="weather-data-unit-section">
                     <h2 className="weather-data-temperature-value">{Math.round(isCelsius ? props.data.celsius : convertCelsiusToFahrenheit(props.data.celsius))}</h2>
                     <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span>

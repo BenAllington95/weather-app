@@ -10,24 +10,24 @@
   max-width: 400px;
   margin: 0 auto;
   border-radius: 30px;
-  background: #005d92;
-  transition: all 0.2s;
+  background: #00699c;
+  transition: all 0.2s ease-in-out;
 }
 .App .weather-input .weather-input-form .weather-input-el {
   padding: 1em;
   border: none;
   font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   outline: none;
   background: none;
   width: 85%;
-  color: #005d92;
+  color: #333333;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 .App .weather-input .weather-input-form .weather-input-el:focus {
   background: white;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 .App .weather-input .weather-input-form .weather-input-el::-moz-placeholder {
   color: lightgrey;

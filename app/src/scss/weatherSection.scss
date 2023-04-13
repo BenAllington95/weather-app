@@ -54,8 +54,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 70%;
+            width: 100%;
             margin: 0 auto;
+            gap: 20px;
+            padding: 2em 0;
 
 
             .weather-data-unit-section {
@@ -73,12 +75,16 @@
                 }
     
             }
+            .weather-data-img {
+                height: 150px;
+                width: 150px;
+                object-fit: cover;
+                background: $weather-color;
+                border-radius: 50%;
+            }
 
         }
 
-        .weather-data-img {
-            width: 260px;
-            filter: brightness(200%);
-        }
+        
     }
 }

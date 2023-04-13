@@ -3,7 +3,7 @@
   width: 90%;
   margin: 0 auto;
   border-radius: 7.5px;
-  padding: 2em;
+  padding: 2em 0;
   color: #f5f5f5;
   max-width: 700px;
 }
@@ -44,8 +44,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
+  gap: 20px;
+  padding: 2em 0;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section {
   display: flex;
@@ -59,7 +61,11 @@
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section span {
   cursor: pointer;
 }
-.App .weather-data-section .weather-data-img {
-  width: 260px;
-  filter: brightness(200%);
+.App .weather-data-section .weather-data-temperature .weather-data-img {
+  height: 150px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: lightblue;
+  border-radius: 50%;
 }/*# sourceMappingURL=weatherSection.css.map */

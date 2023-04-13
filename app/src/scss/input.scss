@@ -16,8 +16,8 @@ $input-border-radius: 30px;
             max-width: 400px;
             margin: 0 auto;
             border-radius: $input-border-radius;
-            background: #005d92;
-            transition: all 0.2s;
+            background: $input-background-color;
+            transition: all 0.2s ease-in-out;
 
     
 
@@ -29,13 +29,13 @@ $input-border-radius: 30px;
                 outline: none;
                 background: none;
                 width: 85%;
-                color: #005d92;
+                color: $text-color;
                 border-top-left-radius: $input-border-radius;
                 border-bottom-left-radius: $input-border-radius;
 
                 &:focus {
                     background: white;
-                    transition: all 0.2s;
+                    transition: all 0.2s ease-in-out;
                 }              
 
                 &::placeholder {
