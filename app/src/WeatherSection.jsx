@@ -47,6 +47,7 @@ export default function WeatherSection(props) {
             </div>
             <WeatherInfo 
             data={props.data}
+            isCelsius={isCelsius}
             />
 
 
