@@ -104,6 +104,9 @@
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section .weather-data-temperature-value {
   font-size: 4rem;
 }
+.App .weather-data-section .weather-data-temperature .weather-data-unit-section span {
+  cursor: pointer;
+}
 .App .weather-data-section .weather-data-img {
   width: 260px;
   filter: brightness(200%);
