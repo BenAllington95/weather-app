@@ -33,8 +33,8 @@ function App() {
           icon: data.weather[0].icon,
           humidity: data.main.humidity,
           feelsLike: data.main.feels_like,
-          tempMin: data.main.temp_min,
-          tempMax: data.main.temp_max
+          minTemp: data.main.temp_min,
+          maxTemp: data.main.temp_max,
         }))
       }, [count]) 
       

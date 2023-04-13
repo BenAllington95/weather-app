@@ -43,10 +43,10 @@ export default function WeatherSection(props) {
                     <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span>
                     <span style={fahrenheitStyle} onClick={handleTemperature} id="fahrenheit-id">°F</span>
                 </div>
+            </div>
             <WeatherInfo 
             data={props.data}
             />
-            </div>
 
 
             
