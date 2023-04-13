@@ -12,6 +12,7 @@ function WeatherInfo(props) {
 
     function tempConversion(boolean, celsius) {
         const fahrenheit = (celsius * 9/5) + 32;
+        const symbol = boolean ? '°C' : '°F'
 
         let value
         if (boolean) {
@@ -20,20 +21,15 @@ function WeatherInfo(props) {
             value = fahrenheit
         }
 
-        return Math.round(value)
+        return `${Math.round(value)}${symbol}`
     }
-
-    console.log(tempConversion(props.isCelsius, props.data.celsius))
-
-
-
 
   return (
     <div className="weather-info-section">
     <p>Humidity: {props.data.humidity}%</p>
-    <p>Feels Like: {tempConversion(props.isCelsius, props.data.feelsLike)}°C</p>
-    <p>Min: {tempConversion(props.isCelsius, props.data.minTemp)}°C</p>
-    <p>Max: {tempConversion(props.isCelsius, props.data.maxTemp)}°C</p>
+    <p>Feels Like: {tempConversion(props.isCelsius, props.data.feelsLike)}</p>
+    <p>Min: {tempConversion(props.isCelsius, props.data.minTemp)}</p>
+    <p>Max: {tempConversion(props.isCelsius, props.data.maxTemp)}</p>
     </div>
   );
 }
