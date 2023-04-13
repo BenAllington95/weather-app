@@ -31,7 +31,7 @@ export default function WeatherSection(props) {
             </div>
 
             <div className="weather-data-temperature">
-                <img className="weather-data-img" src={props.data.icon} />
+                <img src={`https://openweathermap.org/img/wn/${props.data.icon}@4x.png`} alt="Weather icon" />
                 <h2 className="weather-data-temperature-value">{Math.round(isCelsius ? props.data.celsius : props.data.fahrenheit)}</h2>
                 <div className="weather-data-unit-section">
                     <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span>
