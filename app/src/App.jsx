@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Input from './Input'
-import WeatherSection from './WeatherSection'
+import WeatherSection from './WeatherSection';
+import { FaSpinner } from "react-icons/fa";
 
 import './scss/main.css'
 
@@ -9,12 +10,13 @@ function App() {
 
   const [api, setApi] = useState( {
     apiKey: "1874456ba81eccb853b6291488a6f9c8",
-    location: "Manchester"
+    location: ""
   })
 
   const [data, setData] = useState([]) // to store the API Data which is altered into a readable format
   const [isSubmitted, setIsSubmitted] = useState(false) // When true, the weatherSection will appear
   const [count, setCount] = useState(0) // to control the api hook
+  const [isLoading, setIsLoading] = useState(false)
     
     
     useEffect(() => {
@@ -23,7 +25,9 @@ function App() {
       
       fetch(apiUrl)    
       .then(res => res.json())
-        .then(data => setData({
+        .then(data => {
+          setIsLoading(true)
+          setData({
           name: data.name,
           country: data.sys.country,
           localTime: "",
@@ -35,7 +39,8 @@ function App() {
           feelsLike: data.main.feels_like,
           minTemp: data.main.temp_min,
           maxTemp: data.main.temp_max,
-        }))
+        })})
+        setIsLoading(false)
       }, [count]) 
       
   return (
@@ -45,12 +50,16 @@ function App() {
       setIsSubmitted={setIsSubmitted}
       setCount={setCount}
       />
+      
+      {!isLoading ? 
+        
+        <div className="loading">
+          <FaSpinner className="spinner" size={70} />
+        </div> : 
+      isSubmitted ? 
+        <WeatherSection data={data}/> : 
+        ""}
 
-      {isSubmitted &&
-        <WeatherSection
-        data={data}
-        />
-      }
       
     </div>
   )
@@ -65,3 +74,6 @@ export default App
 //           fahrenheit: data.main.temp,
 //           weatherText: data.weather[0].description,
 //           icon: data.weather[0].icon,
+
+
+//<WeatherSection data={data} />

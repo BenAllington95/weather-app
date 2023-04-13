@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import WeatherInfo from './WeatherInfo';
-import { FaSpinner } from "react-icons/fa";
+
 
 export default function WeatherSection(props) {
 
@@ -48,7 +48,6 @@ export default function WeatherSection(props) {
             <WeatherInfo 
             data={props.data}
             />
-            <FaSpinner className="spinner" size={70} />
 
 
             
