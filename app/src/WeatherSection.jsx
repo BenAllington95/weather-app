@@ -22,17 +22,22 @@ export default function WeatherSection(props) {
         transition: "color 0.2s"
     }
 
+    function convertCelsiusToFahrenheit(celsius) {
+        const fahrenheit = (celsius * 9/5) + 32;
+        return fahrenheit;
+      }
+
     return (
         <div className="weather-data-section">
 
             <div className="weather-data-location">
-                <h1 className="weather-data-location-title">{props.data.name},</h1>
+                <h1 className="weather-data-location-title">{props.data.name}</h1>
                 <p>{props.data.country}</p>
             </div>
 
             <div className="weather-data-temperature">
                 <img src={`https://openweathermap.org/img/wn/${props.data.icon}@4x.png`} alt="Weather icon" />
-                <h2 className="weather-data-temperature-value">{Math.round(isCelsius ? props.data.celsius : props.data.fahrenheit)}</h2>
+                <h2 className="weather-data-temperature-value">{Math.round(isCelsius ? props.data.celsius : convertCelsiusToFahrenheit(props.data.celsius))}</h2>
                 <div className="weather-data-unit-section">
                     <span style={celsiusStyle} onClick={handleTemperature} id="celsius-id">°C</span>
                     <span style={fahrenheitStyle} onClick={handleTemperature} id="fahrenheit-id">°F</span>
