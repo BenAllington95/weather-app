@@ -25,21 +25,21 @@
 .App .weather-data-section .weather-data-temperature {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.App .weather-data-section .weather-data-temperature span {
-  cursor: pointer;
-}
-.App .weather-data-section .weather-data-temperature .weather-data-temperature-value {
-  font-size: 2.4rem;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 0.5em;
+  align-items: baseline;
+  gap: 4px;
   font-size: 1.4rem;
+  margin-right: 2.3em;
+}
+.App .weather-data-section .weather-data-temperature .weather-data-unit-section .weather-data-temperature-value {
+  font-size: 4rem;
 }
 .App .weather-data-section .weather-data-img {
-  width: 50px;
+  width: 260px;
+  filter: brightness(200%);
 }/*# sourceMappingURL=weatherSection.css.map */
