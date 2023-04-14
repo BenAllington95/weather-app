@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Input from './Input'
 import WeatherSection from './WeatherSection';
+import Footer from './Footer'
 import { FaSpinner } from "react-icons/fa";
 
 import './scss/main.css'
@@ -62,20 +63,11 @@ function App() {
         <WeatherSection data={data}/> : 
         ""}
 
+
+      <Footer />
       
     </div>
   )
 }
 
 export default App
-
-// name: data.name,
-//           country: "",
-//           localTime: "",
-//           celsius: data.main.temp,
-//           fahrenheit: data.main.temp,
-//           weatherText: data.weather[0].description,
-//           icon: data.weather[0].icon,
-
-
-//<WeatherSection data={data} />

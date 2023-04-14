@@ -135,6 +135,17 @@
   border-radius: 50%;
 }
 
+.App .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  color: #0077be;
+  text-align: center;
+  padding: 1em 0;
+}
+
 * {
   box-sizing: border-box;
 }
