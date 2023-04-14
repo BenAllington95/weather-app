@@ -124,6 +124,7 @@
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section .weather-data-temperature-value {
   font-size: 4rem;
+  color: #333333;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section span {
   cursor: pointer;
@@ -141,7 +142,6 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: white;
   color: #333333;
   text-align: center;
   padding: 1em 0;

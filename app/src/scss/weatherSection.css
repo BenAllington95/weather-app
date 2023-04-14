@@ -58,6 +58,7 @@
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section .weather-data-temperature-value {
   font-size: 4rem;
+  color: #333333;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section span {
   cursor: pointer;
