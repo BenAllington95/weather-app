@@ -2,10 +2,10 @@
 
 .App {
     .weather-data-section {
-        background: $section-color;
-        width: 90%;
+        background: rgba(255, 255, 255, 0.2);;
+        width: 100%;
         margin: 0 auto;
-        border-radius: 7.5px;
+        border-radius: 4px;
         padding: $section-padding;
         color: $background-color;
         max-width: $max-width;
@@ -22,7 +22,7 @@
                 padding: 1em;
                 width: 20%;
                 background: #fff;
-                border-radius: 7.5px;
+                border-radius: $layout-border-radius;
                 color: $section-color;
 
                 h3 {
@@ -40,11 +40,12 @@
             
             .weather-data-location-title {
                 font-size: 2.5rem;
+                color: $section-color;
             }
 
             p {
                 font-size: 1.4rem;
-                color: lightgray;
+                color: grey;
                 font-weight: bold;
             }
 
@@ -76,10 +77,9 @@
     
             }
             .weather-data-img {
-                height: 150px;
+                height: 120px;
                 width: 150px;
                 object-fit: cover;
-                background: $weather-color;
                 border-radius: 50%;
             }
 

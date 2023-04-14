@@ -10,9 +10,12 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: $section-color;
+    background: $background-color;
+    background-repeat: no-repeat;
     font-family: $font-family;
+    height: 100vh;
 }
+
 
 h1, p, h2, h3{
     margin: 0;
@@ -43,4 +46,5 @@ h1, p, h2, h3{
       transform: rotate(360deg);
     }
   }
-  
+
+ 

@@ -1,6 +1,7 @@
 .App .weather-input {
   width: 100%;
   padding-top: 2em;
+  margin-bottom: 1em;
 }
 .App .weather-input .weather-input-form {
   display: flex;
@@ -10,7 +11,7 @@
   max-width: 400px;
   margin: 0 auto;
   border-radius: 30px;
-  background: #00699c;
+  background: #fff;
   transition: all 0.2s ease-in-out;
 }
 .App .weather-input .weather-input-form .weather-input-el {
@@ -37,7 +38,7 @@
 }
 .App .weather-input .weather-input-form .weather-input-btn {
   background: none;
-  color: white;
+  color: #333333;
   padding: 1em 0;
   border: none;
   font-size: 1rem;
@@ -64,12 +65,12 @@
   }
 }
 .App .weather-data-section {
-  background: #0077be;
-  width: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
   margin: 0 auto;
-  border-radius: 7.5px;
-  padding: 2em 0;
-  color: #f5f5f5;
+  border-radius: 4px;
+  padding: 3em 0;
+  color: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
   max-width: 700px;
 }
 .App .weather-data-section .weather-info-section {
@@ -84,8 +85,8 @@
   padding: 1em;
   width: 20%;
   background: #fff;
-  border-radius: 7.5px;
-  color: #0077be;
+  border-radius: 4px;
+  color: #333333;
 }
 .App .weather-data-section .weather-info-section .weather-info-item h3 {
   font-size: 2rem;
@@ -99,10 +100,11 @@
 }
 .App .weather-data-section .weather-data-location .weather-data-location-title {
   font-size: 2.5rem;
+  color: #333333;
 }
 .App .weather-data-section .weather-data-location p {
   font-size: 1.4rem;
-  color: lightgray;
+  color: grey;
   font-weight: bold;
 }
 .App .weather-data-section .weather-data-temperature {
@@ -127,11 +129,10 @@
   cursor: pointer;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-img {
-  height: 150px;
+  height: 120px;
   width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  background: lightblue;
   border-radius: 50%;
 }
 
@@ -140,8 +141,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f5f5f5;
-  color: #0077be;
+  background-color: white;
+  color: #333333;
   text-align: center;
   padding: 1em 0;
 }
@@ -153,8 +154,10 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #0077be;
+  background: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
+  background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
+  height: 100vh;
 }
 
 h1, p, h2, h3 {

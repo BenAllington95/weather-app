@@ -1,6 +1,7 @@
 .App .weather-input {
   width: 100%;
   padding-top: 2em;
+  margin-bottom: 1em;
 }
 .App .weather-input .weather-input-form {
   display: flex;
@@ -10,7 +11,7 @@
   max-width: 400px;
   margin: 0 auto;
   border-radius: 30px;
-  background: #00699c;
+  background: #fff;
   transition: all 0.2s ease-in-out;
 }
 .App .weather-input .weather-input-form .weather-input-el {
@@ -37,7 +38,7 @@
 }
 .App .weather-input .weather-input-form .weather-input-btn {
   background: none;
-  color: white;
+  color: #333333;
   padding: 1em 0;
   border: none;
   font-size: 1rem;
