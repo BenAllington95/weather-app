@@ -10,17 +10,18 @@
 .App .weather-data-section .weather-info-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 15px;
+  padding: 0 1em;
 }
 .App .weather-data-section .weather-info-section .weather-info-item {
   text-align: center;
-  padding: 1em;
-  width: 20%;
+  padding: 1em 2em;
   background: #fff;
   border-radius: 4px;
   color: #333333;
+  flex: 1;
 }
 .App .weather-data-section .weather-info-section .weather-info-item h3 {
   font-size: 2rem;
@@ -55,6 +56,7 @@
   align-items: baseline;
   gap: 4px;
   font-size: 1.4rem;
+  margin-right: 1.7em;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section .weather-data-temperature-value {
   font-size: 4rem;
@@ -69,4 +71,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+@media (max-width: 762px) {
+  .App .weather-info-section .weather-info-item {
+    width: 50%;
+  }
 }/*# sourceMappingURL=weatherSection.css.map */

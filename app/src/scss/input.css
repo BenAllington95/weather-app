@@ -50,17 +50,4 @@
 }
 .App .weather-input .weather-input-form .weather-input-btn ion-icon {
   font-size: 1em;
-}
-
-@media (max-width: 462px) {
-  .App .weather-input .weather-input-form {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .App .weather-input .weather-input-form .weather-input-el {
-    width: 100%;
-  }
-  .App .weather-input .weather-input-form .weather-input-btn {
-    width: 100%;
-  }
 }/*# sourceMappingURL=input.css.map */

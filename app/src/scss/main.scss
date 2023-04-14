@@ -13,7 +13,7 @@ body {
     background: $background-color;
     background-repeat: no-repeat;
     font-family: $font-family;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -47,6 +47,13 @@ p {
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+  
+
+  @media (max-width: 462px) {
+    .App {
+      padding: 0 1em;
     }
   }
 

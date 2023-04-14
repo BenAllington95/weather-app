@@ -67,21 +67,3 @@ $input-border-radius: 30px;
     } // Weather Input
 } // App
 
-
-@media (max-width: 462px) {
-    .App {
-        .weather-input {
-            .weather-input-form {
-                flex-direction: column;
-                gap: 10px;
-
-                .weather-input-el {
-                    width: 100%;
-                }
-                .weather-input-btn {
-                    width: 100%;
-                }
-            }
-        }
-    }    
-}
