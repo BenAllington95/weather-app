@@ -55,7 +55,6 @@ function App() {
       />
       
       {!isLoading ? 
-        
         <div className="loading">
           <FaSpinner className="spinner" size={70} />
         </div> : 
@@ -63,9 +62,7 @@ function App() {
         <WeatherSection data={data}/> : 
         ""}
 
-
       <Footer />
-      
     </div>
   )
 }
