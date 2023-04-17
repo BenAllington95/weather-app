@@ -2,18 +2,18 @@
   background: rgba(255, 255, 255, 0.2);
   width: 100%;
   margin: 0 auto;
-  border-radius: 4px;
-  padding: 3em 0;
+  border-radius: 10px;
+  padding: 2em 0;
   color: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
   max-width: 700px;
 }
 .App .weather-data-section .weather-info-section {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: 15px;
-  padding: 0 1em;
+  padding: 1em;
 }
 .App .weather-data-section .weather-info-section .weather-info-item {
   text-align: center;
@@ -21,7 +21,13 @@
   background: #fff;
   border-radius: 4px;
   color: #333333;
-  flex: 1;
+  border-radius: 10px;
+  flex: 1 1 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .App .weather-data-section .weather-info-section .weather-info-item h3 {
   font-size: 2rem;
@@ -49,7 +55,7 @@
   width: 100%;
   margin: 0 auto;
   gap: 20px;
-  padding: 2em 0;
+  padding: 0;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-unit-section {
   display: flex;
@@ -73,8 +79,9 @@
   border-radius: 50%;
 }
 
-@media (max-width: 762px) {
+@media (max-width: 800px) {
   .App .weather-info-section .weather-info-item {
-    width: 50%;
+    width: 40%;
+    padding: 2em;
   }
 }/*# sourceMappingURL=weatherSection.css.map */
