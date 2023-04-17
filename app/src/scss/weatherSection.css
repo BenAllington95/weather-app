@@ -23,7 +23,7 @@
   color: #333333;
   border-radius: 10px;
   flex: 1 1 0;
-  min-height: 120px;
+  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,21 +54,28 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  gap: 20px;
-  padding: 0;
 }
-.App .weather-data-section .weather-data-temperature .weather-data-unit-section {
+.App .weather-data-section .weather-data-temperature .weather-data-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.App .weather-data-section .weather-data-temperature .weather-data-right .weather-data-description {
+  margin-top: -0.5em;
+  color: #333333;
+}
+.App .weather-data-section .weather-data-temperature .weather-data-right .weather-data-unit-section {
   display: flex;
   align-items: baseline;
   gap: 4px;
   font-size: 1.4rem;
   margin-right: 1.7em;
 }
-.App .weather-data-section .weather-data-temperature .weather-data-unit-section .weather-data-temperature-value {
+.App .weather-data-section .weather-data-temperature .weather-data-right .weather-data-unit-section .weather-data-temperature-value {
   font-size: 4rem;
   color: #333333;
 }
-.App .weather-data-section .weather-data-temperature .weather-data-unit-section span {
+.App .weather-data-section .weather-data-temperature .weather-data-right .weather-data-unit-section span {
   cursor: pointer;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-img {

@@ -2,13 +2,10 @@ import React from 'react';
 
 function WeatherInfo(props) {
 
-    console.log(props)
-
-
-    function convertCelsiusToFahrenheit(celsius) {
-        const fahrenheit = (celsius * 9/5) + 32;
-        return Math.round(fahrenheit);
-      }
+    // function convertCelsiusToFahrenheit(celsius) {
+    //     const fahrenheit = (celsius * 9/5) + 32;
+    //     return Math.round(fahrenheit);
+    //   }
 
     function tempConversion(boolean, celsius) {
         const fahrenheit = (celsius * 9/5) + 32;
