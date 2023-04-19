@@ -116,7 +116,7 @@
 }
 .App .weather-data-section .weather-data-temperature .weather-data-right .weather-data-description {
   margin-top: -0.5em;
-  color: #333333;
+  color: #808080;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-right .weather-data-unit-section {
   display: flex;
