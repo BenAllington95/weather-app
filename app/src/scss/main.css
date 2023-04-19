@@ -161,6 +161,29 @@
   color: #333333;
 }
 
+.weather-forecast {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2em 0;
+  color: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.weather-forecast .weather-forecast-item {
+  flex: 1;
+}
+.weather-forecast .weather-forecast-item .weather-forecast-img {
+  height: 100px;
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 * {
   box-sizing: border-box;
 }

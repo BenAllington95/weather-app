@@ -1,0 +1,7 @@
+.weather-forecast {
+  display: flex;
+  width: 100%;
+}
+.weather-forecast .weather-forecast-item .weather-forecast-img {
+  height: 30px;
+}/*# sourceMappingURL=weatherForecast.css.map */

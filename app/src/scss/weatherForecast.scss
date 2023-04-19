@@ -1,0 +1,23 @@
+.weather-forecast {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: $section-padding;
+    color: $background-color;
+    max-width: $max-width;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .weather-forecast-item {
+        flex: 1;
+        .weather-forecast-img {
+            height: 100px;
+            width: 120px;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Input from './Input'
 import WeatherSection from './WeatherSection';
+import WeatherForecast from './WeatherForecast'
 import Footer from './Footer'
 import { FaSpinner } from "react-icons/fa";
 
@@ -60,12 +61,6 @@ function App() {
             setForecastData(newForecastData)
           })
           }
-
-          console.log(forecastData[0].weather[0].icon)
-
-          for (let i of forecastData) {
-            console.log(i.weather[0].icon)
-          }
         
 
         setIsLoading(false) // Deactivates the loading animation
@@ -87,7 +82,11 @@ function App() {
           <FaSpinner className="spinner" size={70} />
         </div> : 
       isSubmitted ? 
-        <WeatherSection data={data}/> : 
+        <div>
+        <WeatherSection data={data}/>
+        <WeatherForecast data={forecastData} />
+        </div>
+         : 
         ""}
 
       <Footer />

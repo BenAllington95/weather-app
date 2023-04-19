@@ -29,14 +29,14 @@ export default function WeatherSection(props) {
         return fahrenheit;
       }
 
-    const imageStyle = {
-        backgroundImage: `url(https://openweathermap.org/img/wn/${props.data.icon}@4x.png)`,
-        width: `100px`,
-        height: `100px`,
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-    }
+    // const imageStyle = {
+    //     backgroundImage: `url(https://openweathermap.org/img/wn/${props.data.icon}@4x.png)`,
+    //     width: `100px`,
+    //     height: `100px`,
+    //     backgroundSize: 'contain',
+    //     backgroundPosition: 'center',
+    //     backgroundRepeat: 'no-repeat',
+    // }
 
     return (
         <div className="weather-data-section">
