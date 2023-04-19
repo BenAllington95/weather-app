@@ -61,7 +61,7 @@ function App() {
             setForecastData(newForecastData)
           })
           }
-        
+
 
         setIsLoading(false) // Deactivates the loading animation
         

@@ -14,9 +14,6 @@ export default function WeatherForecast(props) {
             </div>
         )
     })
-
-    
-    console.log(props.data[0].main.temp)
    
 
 
