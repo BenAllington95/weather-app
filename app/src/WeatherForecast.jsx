@@ -19,6 +19,7 @@ export default function WeatherForecast(props) {
 
     return (
         <div className="weather-forecast">
+            <h2>5 Day Forecast</h2>
             <div className="weather-forecast-items">
                 {forecastItems}
             </div>
