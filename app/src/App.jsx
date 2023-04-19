@@ -18,10 +18,14 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false) // When true, the weatherSection will appear
   const [count, setCount] = useState(0) // to control the api hook
   const [isLoading, setIsLoading] = useState(false)
+  const [forecastData, setForecastData] = useState([])
     
     
     useEffect(() => {
           
+
+      // Api for live forecast
+
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`;
       
       fetch(apiUrl)    
@@ -41,10 +45,23 @@ function App() {
           minTemp: data.main.temp_min,
           maxTemp: data.main.temp_max,
         })})
-        setIsLoading(false)
-      }, [count]) 
+       
 
-    
+
+        // Api for 5 Day Forecast
+
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${api.location}&cnt=40&units=metric&appid=8d0c6e676623e24d5c95fb56a82973d4`)
+        .then(res => res.json())
+        .then(data => {
+          const newForecastData = data.list.filter(item => item.dt_txt.includes('12:00:00'))
+          setForecastData(newForecastData)
+        })
+
+        setIsLoading(false) // Deactivates the loading animation
+        
+        
+      }, [count])
+  
       
   return (
     <div className="App">
