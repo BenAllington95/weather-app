@@ -1,23 +1,54 @@
+@import './variables.scss';
+
 .weather-forecast {
-    background: rgba(255, 255, 255, 0.2);
+    background: #fff;
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    padding: $section-padding;
+    padding: 1em;
     color: $background-color;
     max-width: $max-width;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 
-    .weather-forecast-item {
-        flex: 1;
-        .weather-forecast-img {
-            height: 100px;
-            width: 120px;
-            object-fit: cover;
+    .weather-forecast-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+        
+        .weather-forecast-item {
+            border-right: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            .weather-forecast-item-header {
+                color: $text-color;
+            }
+
+
+
+
+            .weather-forecast-img {
+                height: 80px;
+                width: 80px;
+                object-fit: cover;
+                background: $background-color;
+                border-radius: 50%;
+            }
+
         }
+
+        
     }
 }
