@@ -57,7 +57,7 @@
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
-  padding: 2em 0;
+  padding: 1em 0;
   color: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
   max-width: 700px;
   margin-bottom: 1em;
@@ -68,7 +68,7 @@
   align-items: stretch;
   justify-content: center;
   gap: 15px;
-  padding: 1em;
+  padding: 0 1em;
 }
 .App .weather-data-section .weather-info-section .weather-info-item {
   text-align: center;
