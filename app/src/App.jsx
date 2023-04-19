@@ -25,6 +25,7 @@ function App() {
           
 
       // Api for live forecast
+      
 
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`;
       
@@ -50,12 +51,22 @@ function App() {
 
         // Api for 5 Day Forecast
 
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${api.location}&cnt=40&units=metric&appid=8d0c6e676623e24d5c95fb56a82973d4`)
-        .then(res => res.json())
-        .then(data => {
-          const newForecastData = data.list.filter(item => item.dt_txt.includes('12:00:00'))
-          setForecastData(newForecastData)
-        })
+        if (api.location) {
+
+          fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${api.location}&cnt=40&units=metric&appid=8d0c6e676623e24d5c95fb56a82973d4`)
+          .then(res => res.json())
+          .then(data => {
+            const newForecastData = data.list.filter(item => item.dt_txt.includes('12:00:00'))
+            setForecastData(newForecastData)
+          })
+          }
+
+          console.log(forecastData[0].weather[0].icon)
+
+          for (let i of forecastData) {
+            console.log(i.weather[0].icon)
+          }
+        
 
         setIsLoading(false) // Deactivates the loading animation
         
