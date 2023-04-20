@@ -23,7 +23,7 @@
   font-size: 1.3rem;
 }
 .weather-forecast .weather-forecast-heading-items .weather-forecast-heading {
-  color: #333333;
+  color: #171C24;
 }
 .weather-forecast .weather-forecast-items {
   display: flex;
@@ -46,8 +46,12 @@
 .weather-forecast .weather-forecast-items .weather-forecast-item:last-child {
   border-right: none;
 }
-.weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-header {
-  color: #333333;
+.weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-heading {
+  color: #171C24;
+}
+.weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-temperature {
+  color: #171C24;
+  font-weight: bold;
 }
 .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-img {
   height: 80px;

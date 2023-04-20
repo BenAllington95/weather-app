@@ -55,8 +55,13 @@
                 border-right: none;
             }
 
-            .weather-forecast-item-header {
+            .weather-forecast-item-heading {
                 color: $text-color;
+            }
+
+            .weather-forecast-item-temperature {
+                color: $text-color;
+                font-weight: bold;
             }
 
 
