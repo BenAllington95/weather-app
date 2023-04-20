@@ -17,16 +17,8 @@ export default function Input(props) {
        setInput("")
      }
 
-     function handleLocationClick() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(position => 
-                props.setGeoLocation({
-                    longitude: `${position.coords.longitude}`,
-                    latitude: `${position.coords.latitude}`
-            }))
-            props.setCount(prevCount => prevCount + 1)
-        }
-     }
+
+
 
 
     return (
@@ -38,7 +30,7 @@ export default function Input(props) {
                     <input value={input} className="weather-input-el" placeholder="Search location (e.g. New York, USA)" onChange={handleInputChange} type="text"/>
                     <button className="weather-input-btn" type="submit"><ion-icon name="search-sharp"></ion-icon></button>
                 </form>
-                <button className="weather-input-geo-btn" onClick={handleLocationClick}><ion-icon name="navigate"></ion-icon></button>
+                <button className="weather-input-geo-btn" onClick={props.handleGeoSubmit}><ion-icon name="navigate"></ion-icon></button>
             </div>
         </div>
     )

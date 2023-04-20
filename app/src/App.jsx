@@ -21,7 +21,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [forecastData, setForecastData] = useState([])
   const [isCelsius, setIsCelsius] = useState(true)
-  const [geoLocation, setGeoLocation] = useState([]) 
+  const [localLocation, setLocalLocation] = useState([])
     
     
     useEffect(() => {          
@@ -33,10 +33,11 @@ function App() {
       //     .then(data => console.log(data.name))
 
 
-    const geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${geoLocation.latitude}&lon=${geoLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`
+      const geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${localLocation.latitude}&lon=${localLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`
 
   
+     
       
       fetch(apiUrl)    
       .then(res => res.json())
@@ -70,26 +71,34 @@ function App() {
             setForecastData(newForecastData)
           })
           }
+        setIsLoading(false) // Deactivates the loading animation
 
-
-        setIsLoading(false)
-        setGeoLocation([]) // Deactivates the loading animation
         
         
-      }, [count])
+      }, [count, localLocation])
+
       
-      // const [metric, setMetric] = useState("celsius")
-      // console.log(metric)
-      
-  
-      
+
+      function handleGeoSubmit() {
+          navigator.geolocation.getCurrentPosition(position => setLocalLocation({
+            longitude: `${position.coords.longitude}`,
+            latitude: `${position.coords.latitude}`
+          }))
+
+
+        setCount(prevCount => prevCount + 1)
+      }
+
+
+
+
   return (
     <div className="App">
       <Input 
       setApi={setApi}
       setIsSubmitted={setIsSubmitted}
       setCount={setCount}
-      setGeoLocation={setGeoLocation}
+      handleGeoSubmit={handleGeoSubmit}
       />
       
       {!isLoading ? 
