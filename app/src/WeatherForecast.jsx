@@ -8,9 +8,9 @@ export default function WeatherForecast(props) {
         const dayString = daysOfWeek[day]
         return (
             <div className="weather-forecast-item" key={`item${index}`}>
-                <h3 className="weather-forecast-item-header">{dayString}</h3>
+                <h3 className="weather-forecast-item-header">{dayString.slice(0,3)}</h3>
                 <img className="weather-forecast-img" src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`} alt="Weather-icon" />
-                <p>{Math.round(item.main.temp)}{props.isCelsius ? "celsius" : "fahrenheit"}</p>
+                <p>{Math.round(item.main.temp)}{props.isCelsius ? "°C" : "°F"}</p>
             </div>
         )
     })
@@ -19,7 +19,7 @@ export default function WeatherForecast(props) {
 
     return (
         <div className="weather-forecast">
-            <h2>5 Day Forecast</h2>
+            <h2 className="weather-forecast-heading">5 Day Forecast</h2>
             <div className="weather-forecast-items">
                 {forecastItems}
             </div>
