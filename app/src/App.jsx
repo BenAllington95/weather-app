@@ -3,7 +3,7 @@ import Input from './Input'
 import WeatherSection from './WeatherSection';
 import WeatherForecast from './WeatherForecast'
 import Footer from './Footer'
-import { FaSpinner } from "react-icons/fa";
+import { FaComments, FaSpinner } from "react-icons/fa";
 
 import './scss/main.css'
 
@@ -20,15 +20,23 @@ function App() {
   const [count, setCount] = useState(0) // to control the api hook
   const [isLoading, setIsLoading] = useState(false)
   const [forecastData, setForecastData] = useState([])
+  const [isCelsius, setIsCelsius] = useState(true)
+  const [geoLocation, setGeoLocation] = useState([]) 
     
     
-    useEffect(() => {
-          
+    useEffect(() => {          
 
       // Api for live forecast
-      
 
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`;
+      // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${geoLocation.latitude}&lon=${geoLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`)
+      //   .then(res => res.json())
+      //     .then(data => console.log(data.name))
+
+
+    const geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${geoLocation.latitude}&lon=${geoLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`
+
+  
       
       fetch(apiUrl)    
       .then(res => res.json())
@@ -47,6 +55,7 @@ function App() {
           minTemp: data.main.temp_min,
           maxTemp: data.main.temp_max,
         })})
+
        
 
 
@@ -63,14 +72,15 @@ function App() {
           }
 
 
-        setIsLoading(false) // Deactivates the loading animation
+        setIsLoading(false)
+        setGeoLocation([]) // Deactivates the loading animation
         
         
       }, [count])
       
       // const [metric, setMetric] = useState("celsius")
       // console.log(metric)
-      const [isCelsius, setIsCelsius] = useState(true)
+      
   
       
   return (
@@ -79,6 +89,7 @@ function App() {
       setApi={setApi}
       setIsSubmitted={setIsSubmitted}
       setCount={setCount}
+      setGeoLocation={setGeoLocation}
       />
       
       {!isLoading ? 

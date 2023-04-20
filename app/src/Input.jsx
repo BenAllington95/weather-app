@@ -3,7 +3,7 @@ import { useState } from 'react'
 export default function Input(props) {
 
     const [input, setInput] = useState("")
-    const [location, setLocation] = useState([])
+   
 
     function handleInputChange(e) {
         setInput(e.target.value)
@@ -20,10 +20,11 @@ export default function Input(props) {
      function handleLocationClick() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => 
-                setLocation({
-                    longitude: position.coords.longitude,
-                    latitude: position.coords.latitude
+                props.setGeoLocation({
+                    longitude: `${position.coords.longitude}`,
+                    latitude: `${position.coords.latitude}`
             }))
+            props.setCount(prevCount => prevCount + 1)
         }
      }
 
