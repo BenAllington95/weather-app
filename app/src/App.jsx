@@ -67,6 +67,10 @@ function App() {
         
         
       }, [count])
+      
+      // const [metric, setMetric] = useState("celsius")
+      // console.log(metric)
+      const [isCelsius, setIsCelsius] = useState(true)
   
       
   return (
@@ -83,8 +87,16 @@ function App() {
         </div> : 
       isSubmitted ? 
         <div>
-        <WeatherSection data={data}/>
-        <WeatherForecast data={forecastData} />
+        <WeatherSection 
+        data={data}
+        setIsCelsius={setIsCelsius}
+        isCelsius={isCelsius}
+        />
+        <WeatherForecast 
+        data={forecastData} 
+        isCelsius={isCelsius}
+        />
+        
         </div>
          : 
         ""}

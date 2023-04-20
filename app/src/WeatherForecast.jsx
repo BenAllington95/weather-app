@@ -10,7 +10,7 @@ export default function WeatherForecast(props) {
             <div className="weather-forecast-item" key={`item${index}`}>
                 <h3 className="weather-forecast-item-header">{dayString}</h3>
                 <img className="weather-forecast-img" src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`} alt="Weather-icon" />
-                <p>{Math.round(item.main.temp)}</p>
+                <p>{Math.round(item.main.temp)}{props.isCelsius ? "celsius" : "fahrenheit"}</p>
             </div>
         )
     })
