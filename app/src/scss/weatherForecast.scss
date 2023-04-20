@@ -9,7 +9,7 @@
     color: $background-color;
     max-width: $max-width;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
@@ -19,6 +19,7 @@
         align-items: center;
         justify-content: center;
         gap: 5px;
+        margin-left: 1em;
 
         ion-icon[name="calendar-outline"]{
             font-size: 1.3rem;
