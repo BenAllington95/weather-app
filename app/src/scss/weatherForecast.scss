@@ -14,6 +14,10 @@
     flex-direction: column;
     gap: 10px;
 
+    .weather-forecast-heading {
+        color: $text-color;
+    }
+
     .weather-forecast-items {
         display: flex;
         align-items: center;
