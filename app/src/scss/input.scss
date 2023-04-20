@@ -9,61 +9,82 @@ $input-border-radius: 30px;
         padding-top: 2em;
         margin-bottom: 1em;
 
-        .weather-input-form {
+        .weather-input-container {
+            width: 100%;
             display: flex;
             align-items: center;
-            width: 100%;
             justify-content: center;
-            max-width: 400px;
+            background: $text-color;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            max-width: $max-width;
             margin: 0 auto;
-            border-radius: $input-border-radius;
-            background: $input-background-color;
-            transition: all 0.2s ease-in-out;
 
-    
-
-            .weather-input-el {
-                padding: 1em;
-                border: none;
-                font-size: 1rem;
-                font-family: $font-family;
-                outline: none;
+            .weather-input-geo-btn {
                 background: none;
-                width: 85%;
-                color: $text-color;
-                border-top-left-radius: $input-border-radius;
-                border-bottom-left-radius: $input-border-radius;
-
-                &:focus {
-                    background: white;
-                    transition: all 0.2s ease-in-out;
-                }              
-
-                &::placeholder {
-                    color: lightgrey;
-                }
-
-        
-
-            } // Weather Input
-
-            .weather-input-btn {
-                background: none;
-                color: $text-color;
-                padding: 1em 0;
+                color: #fff;
                 border: none;
-                font-size: 1rem;
-                width: 15%;
-                transition: background-color 0.3s ease;
-                border-top-right-radius: 50%;
-                border-bottom-right-radius: 50%;
+                font-size: 1.1rem;
+                width: 10%;
+                display: grid;
+                place-content: center;
                 cursor: pointer;
+            }
+            
+            .weather-input-form {
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                margin: 0 auto;
+                border-radius: $input-border-radius;
+                background: $input-background-color;
+                transition: all 0.2s ease-in-out;
 
-                ion-icon {
-                    font-size: 1em;
-                }
-            } // Weather Input Button
-        } // Weather Input Form
+                .weather-input-el {
+                    padding: 1em;
+                    border: none;
+                    font-size: 1rem;
+                    font-family: $font-family;
+                    outline: none;
+                    background: none;
+                    width: 85%;
+                    color: $text-color;
+                    border-top-left-radius: $input-border-radius;
+                    border-bottom-left-radius: $input-border-radius;
+    
+                    &:focus {
+                        background: white;
+                        transition: all 0.2s ease-in-out;
+                    }              
+    
+                    &::placeholder {
+                        color: lightgrey;
+                    }
+    
+            
+    
+                } // Weather Input
+    
+                .weather-input-btn {
+                    background: none;
+                    color: $text-color;
+                    padding: 1em 0;
+                    border: none;
+                    font-size: 1rem;
+                    width: 15%;
+                    transition: background-color 0.3s ease;
+                    border-top-right-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    cursor: pointer;
+    
+                    ion-icon {
+                        font-size: 1em;
+                    }
+                } // Weather Input Button
+            } // Weather Input Form
+        } // Weather Input Container
     } // Weather Input
 } // App
 

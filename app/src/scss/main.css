@@ -3,18 +3,39 @@
   padding-top: 2em;
   margin-bottom: 1em;
 }
-.App .weather-input .weather-input-form {
+.App .weather-input .weather-input-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: center;
-  max-width: 400px;
+  background: #333333;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.App .weather-input .weather-input-container .weather-input-geo-btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  width: 10%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.App .weather-input .weather-input-container .weather-input-form {
+  display: flex;
+  justify-content: center;
+  width: 90%;
   margin: 0 auto;
   border-radius: 30px;
   background: #fff;
   transition: all 0.2s ease-in-out;
 }
-.App .weather-input .weather-input-form .weather-input-el {
+.App .weather-input .weather-input-container .weather-input-form .weather-input-el {
   padding: 1em;
   border: none;
   font-size: 1rem;
@@ -26,17 +47,17 @@
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.App .weather-input .weather-input-form .weather-input-el:focus {
+.App .weather-input .weather-input-container .weather-input-form .weather-input-el:focus {
   background: white;
   transition: all 0.2s ease-in-out;
 }
-.App .weather-input .weather-input-form .weather-input-el::-moz-placeholder {
+.App .weather-input .weather-input-container .weather-input-form .weather-input-el::-moz-placeholder {
   color: lightgrey;
 }
-.App .weather-input .weather-input-form .weather-input-el::placeholder {
+.App .weather-input .weather-input-container .weather-input-form .weather-input-el::placeholder {
   color: lightgrey;
 }
-.App .weather-input .weather-input-form .weather-input-btn {
+.App .weather-input .weather-input-container .weather-input-form .weather-input-btn {
   background: none;
   color: #333333;
   padding: 1em 0;
@@ -48,7 +69,7 @@
   border-bottom-right-radius: 50%;
   cursor: pointer;
 }
-.App .weather-input .weather-input-form .weather-input-btn ion-icon {
+.App .weather-input .weather-input-container .weather-input-form .weather-input-btn ion-icon {
   font-size: 1em;
 }
 

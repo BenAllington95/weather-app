@@ -19,9 +19,10 @@ export default function Input(props) {
 
      function handleLocationClick() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(position => setLocation({
-                longitude: position.coords.longitude,
-                latitude: position.coords.latitude
+            navigator.geolocation.getCurrentPosition(position => 
+                setLocation({
+                    longitude: position.coords.longitude,
+                    latitude: position.coords.latitude
             }))
         }
      }
@@ -29,13 +30,15 @@ export default function Input(props) {
 
     return (
         <div className="weather-input">
-            <form 
-            className="weather-input-form" 
-            onSubmit={handleSubmit}>
-                <input value={input} className="weather-input-el" placeholder="Search location (e.g. New York, USA)" onChange={handleInputChange} type="text"/>
-                <button className="weather-input-btn" type="submit"><ion-icon name="search-sharp"></ion-icon></button>
-            </form>
-            <button onClick={handleLocationClick}><ion-icon name="navigate"></ion-icon></button>
+            <div className="weather-input-container">
+                <form 
+                className="weather-input-form" 
+                onSubmit={handleSubmit}>
+                    <input value={input} className="weather-input-el" placeholder="Search location (e.g. New York, USA)" onChange={handleInputChange} type="text"/>
+                    <button className="weather-input-btn" type="submit"><ion-icon name="search-sharp"></ion-icon></button>
+                </form>
+                <button className="weather-input-geo-btn" onClick={handleLocationClick}><ion-icon name="navigate"></ion-icon></button>
+            </div>
         </div>
     )
 }
