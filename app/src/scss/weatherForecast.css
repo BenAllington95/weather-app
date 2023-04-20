@@ -12,7 +12,16 @@
   flex-direction: column;
   gap: 10px;
 }
-.weather-forecast .weather-forecast-heading {
+.weather-forecast .weather-forecast-heading-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.weather-forecast .weather-forecast-heading-items ion-icon[name=calendar-outline] {
+  font-size: 1.3rem;
+}
+.weather-forecast .weather-forecast-heading-items .weather-forecast-heading {
   color: #333333;
 }
 .weather-forecast .weather-forecast-items {

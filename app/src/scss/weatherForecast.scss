@@ -14,9 +14,23 @@
     flex-direction: column;
     gap: 10px;
 
-    .weather-forecast-heading {
-        color: $text-color;
+    .weather-forecast-heading-items {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        ion-icon[name="calendar-outline"]{
+            font-size: 1.3rem;
+        }
+
+        .weather-forecast-heading {
+            color: $text-color;
+        }
+
     }
+
+    
 
     .weather-forecast-items {
         display: flex;
