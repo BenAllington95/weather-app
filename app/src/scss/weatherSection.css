@@ -55,6 +55,7 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto;
+  padding: 1em 0;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-right {
   display: flex;
@@ -80,7 +81,7 @@
   cursor: pointer;
 }
 .App .weather-data-section .weather-data-temperature .weather-data-img {
-  height: 120px;
+  height: 100px;
   width: 150px;
   -o-object-fit: cover;
      object-fit: cover;

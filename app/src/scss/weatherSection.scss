@@ -10,6 +10,7 @@
         color: $background-color;
         max-width: $max-width;
         margin-bottom: 1em;
+        
 
         .weather-info-section {
             display: flex;
@@ -66,6 +67,7 @@
             justify-content: center;
             width: 100%;
             margin: 0 auto;
+            padding: 1em 0;
 
             .weather-data-right {
                 display: flex;
@@ -100,7 +102,7 @@
     
             }
             .weather-data-img {
-                height: 120px;
+                height: 100px;
                 width: 150px;
                 object-fit: cover;
                 border-radius: 50%;
