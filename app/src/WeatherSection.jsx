@@ -16,12 +16,12 @@ export default function WeatherSection(props) {
     }
 
     const fahrenheitStyle = {
-        color: !props.isCelsius ? "#333333" : "grey",
+        color: !props.isCelsius ? "#171C24" : "#697384",
         transition: "color 0.2s"
     }
 
     const celsiusStyle = {
-        color: props.isCelsius ? "#333333" : "grey",
+        color: props.isCelsius ? "#171C24" : "#697384",
         transition: "color 0.2s"
     }
 
