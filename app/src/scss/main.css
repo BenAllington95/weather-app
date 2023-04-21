@@ -226,6 +226,11 @@
   background: #fff;
   border-radius: 10px;
 }
+@media (max-width: 768px) {
+  .weather-forecast .weather-forecast-items {
+    flex-direction: column;
+  }
+}
 .weather-forecast .weather-forecast-items .weather-forecast-item {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
@@ -235,11 +240,30 @@
   gap: 10px;
   flex: 1;
 }
+@media (max-width: 768px) {
+  .weather-forecast .weather-forecast-items .weather-forecast-item {
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    width: 100%;
+    padding: 1em;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .weather-forecast .weather-forecast-items .weather-forecast-item:last-child {
+    border-bottom: none;
+  }
+}
 .weather-forecast .weather-forecast-items .weather-forecast-item:last-child {
   border-right: none;
 }
 .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-heading {
   color: #171C24;
+}
+@media (max-width: 768px) {
+  .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-heading {
+    width: 50%;
+  }
 }
 .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-temperature {
   color: #171C24;
@@ -252,6 +276,12 @@
      object-fit: cover;
   background: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 * {

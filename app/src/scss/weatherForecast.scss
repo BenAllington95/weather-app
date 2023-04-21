@@ -41,6 +41,12 @@
         padding: 1em;
         background: #fff;
         border-radius: 10px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    
+        
         
         .weather-forecast-item {
             border-right: 1px solid rgba(0,0,0,0.1);
@@ -51,17 +57,41 @@
             gap: 10px;
             flex: 1;
 
+            @media (max-width: 768px) {
+                flex-direction: row;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                border-right: none;
+                width: 100%;
+                padding: 1em;
+                gap: 20px;
+                justify-content: space-between;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
             &:last-child {
                 border-right: none;
             }
 
             .weather-forecast-item-heading {
                 color: $text-color;
+
+                @media (max-width: 768px) {
+                    width: 50%;
+                }
+                                 
             }
 
             .weather-forecast-item-temperature {
                 color: $text-color;
                 font-weight: bold;
+
+                
+
+                
+                
             }
 
 
@@ -73,6 +103,11 @@
                 object-fit: cover;
                 background: $background-color;
                 border-radius: 50%;
+
+                @media (max-width: 768px) {
+                    height: 50px;
+                    width: 50px;
+                }
             }
 
         }
