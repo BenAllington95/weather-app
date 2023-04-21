@@ -236,12 +236,24 @@
   justify-content: center;
   gap: 5px;
   margin-left: 1em;
+  opacity: 0.5;
 }
 .weather-forecast .weather-forecast-heading-items ion-icon[name=calendar-outline] {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .weather-forecast .weather-forecast-heading-items ion-icon[name=calendar-outline] {
+    font-size: 1rem;
+  }
 }
 .weather-forecast .weather-forecast-heading-items .weather-forecast-heading {
   color: #171C24;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .weather-forecast .weather-forecast-heading-items .weather-forecast-heading {
+    font-size: 1rem;
+  }
 }
 .weather-forecast .weather-forecast-items {
   display: flex;
@@ -255,6 +267,7 @@
 @media (max-width: 768px) {
   .weather-forecast .weather-forecast-items {
     flex-direction: column;
+    padding: 0;
   }
 }
 .weather-forecast .weather-forecast-items .weather-forecast-item {
@@ -263,7 +276,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   flex: 1;
 }
 @media (max-width: 768px) {
@@ -311,8 +324,8 @@
 }
 @media (max-width: 768px) {
   .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-img {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
   }
 }
 
