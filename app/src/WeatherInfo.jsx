@@ -24,20 +24,22 @@ function WeatherInfo(props) {
   return (
     <div className="weather-info-section">
         <div className="weather-info-item">
-            <p>Humidity</p>
+            <p><ion-icon name="water-sharp"></ion-icon> Humidity</p>
             <h3>{props.data.humidity}%</h3>
         </div>
         <div className="weather-info-item">
-            <p>Feels Like</p>
+            <p><ion-icon name="thermometer-sharp"></ion-icon> Feels Like</p>
             <h3>{tempConversion(props.isCelsius, props.data.feelsLike)}</h3>
         </div>
         <div className="weather-info-item">
-            <p>Min</p>
+            <p><ion-icon name="trending-down-sharp"></ion-icon> Min</p>
             <h3>{tempConversion(props.isCelsius, props.data.minTemp)}</h3>
+            
         </div>
         <div className="weather-info-item">
-            <p>Max</p>
+            <p><ion-icon name="trending-up-sharp"></ion-icon> Max</p>
             <h3>{tempConversion(props.isCelsius, props.data.maxTemp)}</h3>
+          
         </div>
     </div>
   );

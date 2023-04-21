@@ -35,6 +35,7 @@
 }
 .App .weather-data-section .weather-info-section .weather-info-item p {
   color: #697384;
+  font-size: 0.9rem;
 }
 .App .weather-data-section .weather-data-location {
   display: flex;
