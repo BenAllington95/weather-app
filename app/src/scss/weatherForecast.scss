@@ -61,7 +61,7 @@
                 flex-direction: row;
                 border-bottom: 1px solid rgba(0,0,0,0.1);
                 border-right: none;
-                width: 100%;
+                width: 80%;
                 padding: 1em;
                 gap: 20px;
                 justify-content: space-between;
@@ -79,7 +79,8 @@
                 color: $text-color;
 
                 @media (max-width: 768px) {
-                    width: 50%;
+                    width: 30%;
+                    // background: red;
                 }
                                  
             }
@@ -87,8 +88,12 @@
             .weather-forecast-item-temperature {
                 color: $text-color;
                 font-weight: bold;
-
                 
+                @media (max-width: 768px) {
+                    width: 30%;
+                    // background: red;
+                    text-align: right;
+                }
 
                 
                 
