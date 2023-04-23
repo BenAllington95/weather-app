@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import WeatherInfo from './WeatherInfo';
+import FlagImage from './FlagImg'
 
 
 export default function WeatherSection(props) {
 
-    // const [isCelsius, setisCelsius] = useState(true)
+    const [flagUrl, setFlagUrl] = useState("")
 
     function handleTemperature(e) {
         if (e.target.id === 'fahrenheit-id') {
@@ -30,12 +31,20 @@ export default function WeatherSection(props) {
         return fahrenheit;
       }
 
+      useEffect(() => {
+        
+        fetch(`https://restcountries.com/v3.1/alpha/${props.data.country}?fields=flags`)
+            .then(res => res.json())
+                .then(data => setFlagUrl(data.flags.png))
+
+      }, [props.count])
+
     return (
         <div className="weather-data-section">
 
             <div className="weather-data-location">
                 <h1 className="weather-data-location-title">{props.data.name}</h1>
-                <p>{props.data.country}</p>
+                <img src={`${flagUrl}`}  width="30px" alt="url" />        
             </div>
 
             <div className="weather-data-temperature">

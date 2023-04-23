@@ -34,10 +34,7 @@ function App() {
 
 
       const geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${localLocation.latitude}&lon=${localLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`
-
-  
-     
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`     
       
       fetch(apiUrl)    
       .then(res => res.json())
@@ -111,6 +108,7 @@ function App() {
         data={data}
         setIsCelsius={setIsCelsius}
         isCelsius={isCelsius}
+        count={count}
         />
         <WeatherForecast 
         data={forecastData} 
