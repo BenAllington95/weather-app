@@ -11,10 +11,19 @@ export default function Input(props) {
       
      function handleSubmit(e) {
        e.preventDefault()
-       props.setApi(prevState => ({...prevState, location: input}))
-       props.setIsSubmitted(true)
-       props.setCount(prevCount => prevCount + 1)
-       setInput("")
+
+       if (input === "") {
+        alert('Please enter a city to search for weather!');
+       } else {
+        props.setApi(prevState => ({...prevState, location: input}))
+        props.setIsSubmitted(true)
+        props.setCount(prevCount => prevCount + 1)
+        setInput("")
+
+       }
+
+       
+
      }
 
 
