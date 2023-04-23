@@ -34,7 +34,7 @@ export default function WeatherForecast(props) {
     return (
         <div className="weather-forecast">
             <div className="weather-forecast-heading-items">
-                <ion-icon name="calendar-outline"></ion-icon>
+                <ion-icon name="calendar-sharp"></ion-icon>
                 <h2 className="weather-forecast-heading">5-Day Forecast</h2>
             </div>
             <div className="weather-forecast-items">

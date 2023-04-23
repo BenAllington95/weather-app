@@ -55,8 +55,8 @@ export default function WeatherSection(props) {
                 {isLoading ?
                 <FlagImg
                 flagUrl={flagUrl}
-                height="20px"
-                width="30px"
+                height="25px"
+                width="35px"
                 countryCode={props.data.country} 
                 /> 
                 :

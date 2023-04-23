@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 function FlagImage(props) {
 
   const style={
-    borderRadius: "5px"
+    borderRadius: "5px",
+    objectFit: "cover",
+    objectPosition: "center"
+  
   }
 
   return (
