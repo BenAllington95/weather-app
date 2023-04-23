@@ -44,9 +44,7 @@ export default function WeatherSection(props) {
                 setIsLoading(false)
 
       }, [props.count])
-
-      console.log(isLoading)
-
+      
     return (
         <div className="weather-data-section">
 
