@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import WeatherInfo from './WeatherInfo';
-import FlagImage from './FlagImg'
+import FlagImg from './FlagImg'
 
 
 export default function WeatherSection(props) {
@@ -43,8 +43,13 @@ export default function WeatherSection(props) {
         <div className="weather-data-section">
 
             <div className="weather-data-location">
-                <h1 className="weather-data-location-title">{props.data.name}</h1>
-                <img src={`${flagUrl}`}  width="30px" alt="url" />        
+                <h1 className="weather-data-location-title">{props.data.name}</h1>  
+                <FlagImg
+                flagUrl={flagUrl}
+                height="20px"
+                width="30px"
+                countryCode={props.data.country} 
+                />    
             </div>
 
             <div className="weather-data-temperature">
