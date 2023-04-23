@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import WeatherInfo from './WeatherInfo';
 import FlagImg from './FlagImg'
+import { FaComments, FaSpinner } from "react-icons/fa";
 
 
 export default function WeatherSection(props) {
 
     const [flagUrl, setFlagUrl] = useState("")
+    const [isLoading, setIsLoading] = useState(false)
 
     function handleTemperature(e) {
         if (e.target.id === 'fahrenheit-id') {
@@ -35,21 +37,34 @@ export default function WeatherSection(props) {
         
         fetch(`https://restcountries.com/v3.1/alpha/${props.data.country}?fields=flags`)
             .then(res => res.json())
-                .then(data => setFlagUrl(data.flags.png))
+                .then(data => {
+                    setIsLoading(true)
+                    setFlagUrl(data.flags.png)
+                })
+                setIsLoading(false)
 
       }, [props.count])
+
+      console.log(isLoading)
 
     return (
         <div className="weather-data-section">
 
             <div className="weather-data-location">
                 <h1 className="weather-data-location-title">{props.data.name}</h1>  
+                {isLoading ?
                 <FlagImg
                 flagUrl={flagUrl}
                 height="20px"
                 width="30px"
                 countryCode={props.data.country} 
-                />    
+                /> 
+                :
+                <FaSpinner 
+                className="spinner" 
+                size={20}
+                />   
+                }
             </div>
 
             <div className="weather-data-temperature">
