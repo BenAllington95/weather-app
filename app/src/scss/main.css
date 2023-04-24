@@ -204,12 +204,16 @@
 }
 .App .footer {
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
   color: #171C24;
   text-align: center;
   padding: 1em 0;
+}
+@media (max-width: 462px) {
+  .App .footer {
+    position: relative;
+  }
 }
 .App .footer a {
   text-decoration: none;

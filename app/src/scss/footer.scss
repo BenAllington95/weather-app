@@ -3,12 +3,17 @@
 .App {
     .footer {
         position: fixed;
-        left: 0;
         bottom: 0;
         width: 100%;
         color: $section-color;
         text-align: center;
         padding: 1em 0;
+
+        @media (max-width: 462px) {
+          position: relative;
+        }
+
+        
 
         a {
           text-decoration: none;
