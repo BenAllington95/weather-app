@@ -348,7 +348,6 @@
   margin-right: 1em;
   z-index: 9999;
   cursor: pointer;
-  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 .theme-btn ion-icon {
   font-size: 1.4rem;
@@ -361,10 +360,14 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
+}
+
+.App {
   min-height: 100vh;
+  background: linear-gradient(to bottom, #a7d1e9, #f2fcfe);
+  transition: background 0.2s;
 }
 
 h1,

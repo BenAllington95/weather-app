@@ -13,10 +13,14 @@
 body {
     padding: 0;
     margin: 0;
-    background: $background-color;
     background-repeat: no-repeat;
     font-family: $font-family;
-    min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  background: $background-color;
+  transition: background 0.2s;
 }
 
 

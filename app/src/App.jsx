@@ -4,9 +4,7 @@ import WeatherSection from './WeatherSection';
 import WeatherForecast from './WeatherForecast'
 import Footer from './Footer'
 import DarkModeToggle from './DarkModeToggle'
-
 import { FaComments, FaSpinner } from "react-icons/fa";
-
 import './scss/main.css'
 
 function App() {
@@ -24,8 +22,10 @@ function App() {
   const [forecastData, setForecastData] = useState([])
   const [isCelsius, setIsCelsius] = useState(true)
   const [localLocation, setLocalLocation] = useState([])
-    
-    
+  const [isDarkMode, setIsDarkMode] = useState(false)
+  
+  
+
     useEffect(() => {          
 
       // Api for live forecast
@@ -89,10 +89,16 @@ function App() {
       }
 
 
+  
+
+      const appStyle = {
+        background: !isDarkMode ? "#a7d1e9" : "#293b5f",
+        transition: "background 0.3s"
+      }
 
 
   return (
-    <div className="App">
+    <div style={appStyle} className="App">
       <Input 
       setApi={setApi}
       setIsSubmitted={setIsSubmitted}
@@ -121,7 +127,10 @@ function App() {
          : 
         ""}
 
-      <DarkModeToggle />
+      <DarkModeToggle
+      isDarkMode={isDarkMode}
+      setIsDarkMode={setIsDarkMode}
+      />
       <Footer />
     </div>
   )
