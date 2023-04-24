@@ -3,6 +3,8 @@ import Input from './Input'
 import WeatherSection from './WeatherSection';
 import WeatherForecast from './WeatherForecast'
 import Footer from './Footer'
+import DarkModeToggle from './DarkModeToggle'
+
 import { FaComments, FaSpinner } from "react-icons/fa";
 
 import './scss/main.css'
@@ -119,6 +121,7 @@ function App() {
          : 
         ""}
 
+      <DarkModeToggle />
       <Footer />
     </div>
   )

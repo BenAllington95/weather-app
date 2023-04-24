@@ -3,6 +3,8 @@
 @import './weatherSection.scss';
 @import './footer.scss';
 @import './weatherForecast.scss';
+@import './DarkModeToggle.scss';
+
 
 * {
     box-sizing: border-box;
@@ -16,6 +18,7 @@ body {
     font-family: $font-family;
     min-height: 100vh;
 }
+
 
 
 h1, 

@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+.theme-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: white;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    z-index: 9999;
+    cursor: pointer;
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
+
+    ion-icon {
+        font-size: 1.4rem;
+    }
+  }
