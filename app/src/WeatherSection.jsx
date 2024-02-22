@@ -6,6 +6,8 @@ import { FaComments, FaSpinner } from "react-icons/fa";
 
 export default function WeatherSection(props) {
 
+    console.log(props.data)
+
     const [flagUrl, setFlagUrl] = useState("")
     const [isLoading, setIsLoading] = useState(false)
 

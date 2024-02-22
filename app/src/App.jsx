@@ -1,139 +1,104 @@
-import { useState, useEffect } from 'react'
-import Input from './Input'
+import React, { useState, useEffect } from 'react';
+import Input from './Input';
 import WeatherSection from './WeatherSection';
-import WeatherForecast from './WeatherForecast'
-import Footer from './Footer'
-import DarkModeToggle from './DarkModeToggle'
+import WeatherForecast from './WeatherForecast';
+import Footer from './Footer';
+import DarkModeToggle from './DarkModeToggle';
 import { FaComments, FaSpinner } from "react-icons/fa";
-import './scss/main.css'
+import './scss/main.css';
 
 function App() {
-  
-
-  const [api, setApi] = useState( {
+  const [api, setApi] = useState({
     apiKey: "1874456ba81eccb853b6291488a6f9c8",
-    location: ""
-  })
+    location: "",
+  });
+  const [data, setData] = useState(null); // Store weather data
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [forecastData, setForecastData] = useState([]);
+  const [isCelsius, setIsCelsius] = useState(true);
+  const [localLocation, setLocalLocation] = useState({latitude: null, longitude: null});
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const [data, setData] = useState([]) // to store the API Data which is altered into a readable format
-  const [isSubmitted, setIsSubmitted] = useState(false) // When true, the weatherSection will appear
-  const [count, setCount] = useState(0) // to control the api hook
-  const [isLoading, setIsLoading] = useState(false)
-  const [forecastData, setForecastData] = useState([])
-  const [isCelsius, setIsCelsius] = useState(true)
-  const [localLocation, setLocalLocation] = useState([])
-  const [isDarkMode, setIsDarkMode] = useState(false)
-  
-  
+  // Fetch weather data based on location name or coordinates
+  useEffect(() => {
+    if (isSubmitted) {
+      const baseURL = `https://api.openweathermap.org/data/2.5/weather?appid=${api.apiKey}&units=metric`;
+      let url;
 
-    useEffect(() => {          
+      if (api.location) {
+        url = `${baseURL}&q=${api.location}`;
+      } else if (localLocation.latitude && localLocation.longitude) {
+        url = `${baseURL}&lat=${localLocation.latitude}&lon=${localLocation.longitude}`;
+      }
 
-      // Api for live forecast
-
-      // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${geoLocation.latitude}&lon=${geoLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`)
-      //   .then(res => res.json())
-      //     .then(data => console.log(data.name))
-
-
-      const geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${localLocation.latitude}&lon=${localLocation.longitude}&appid=dfea117cc9a5511c53d8d6477a5a67ac`
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${api.location}&appid=${api.apiKey}&units=metric`     
-      
-      fetch(apiUrl)    
-      .then(res => res.json())
-        .then(data => {
-          setIsLoading(true)
-          setData({
-          name: data.name,
-          country: data.sys.country,
-          localTime: "",
-          celsius: data.main.temp,
-          fahrenheit: data.main.temp,
-          weatherText: data.weather[0].description,
-          icon: data.weather[0].icon,
-          humidity: data.main.humidity,
-          feelsLike: data.main.feels_like,
-          minTemp: data.main.temp_min,
-          maxTemp: data.main.temp_max,
-        })})
-
-       
-
-
-        // Api for 5 Day Forecast
-
-        if (api.location) {
-
-          fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${api.location}&cnt=40&units=metric&appid=8d0c6e676623e24d5c95fb56a82973d4`)
-          .then(res => res.json())
+      if (url) {
+        setIsLoading(true);
+        fetch(url)
+          .then(response => response.json())
           .then(data => {
-            const newForecastData = data.list.filter(item => item.dt_txt.includes('12:00:00'))
-            setForecastData(newForecastData)
+            setData(data);
+            setIsLoading(false);
           })
-          }
-        setIsLoading(false) // Deactivates the loading animation
-
-        
-        
-      }, [count, localLocation])
-
-      
-
-      function handleGeoSubmit() {
-          navigator.geolocation.getCurrentPosition(position => setLocalLocation({
-            longitude: `${position.coords.longitude}`,
-            latitude: `${position.coords.latitude}`
-          }))
-
-
-        setCount(prevCount => prevCount + 1)
+          .catch(error => {
+            console.error('Error fetching data:', error);
+            setIsLoading(false);
+          });
       }
+    }
+  }, [api.location, localLocation, isSubmitted]);
 
+  const handleGeoSubmit = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+      setLocalLocation({
+        longitude: position.coords.longitude,
+        latitude: position.coords.latitude
+      });
+      setApi(prevApi => ({...prevApi, location: ''})); // Clear location to ensure geolocation is used
+      setIsSubmitted(true);
+    });
+  };
 
-  
-
-      const appStyle = {
-        background: !isDarkMode ? "#a7d1e9" : "#293b5f",
-        transition: "background 0.3s"
-      }
-
+  const appStyle = {
+    background: !isDarkMode ? "#a7d1e9" : "#293b5f",
+    transition: "background 0.3s",
+  };
 
   return (
     <div style={appStyle} className="App">
       <Input 
-      setApi={setApi}
-      setIsSubmitted={setIsSubmitted}
-      setCount={setCount}
-      handleGeoSubmit={handleGeoSubmit}
+        setApi={setApi}
+        setIsSubmitted={setIsSubmitted}
+        handleGeoSubmit={handleGeoSubmit}
       />
       
-      {!isLoading ? 
+      {isLoading ? (
         <div className="loading">
           <FaSpinner className="spinner" size={70} />
-        </div> : 
-      isSubmitted ? 
-        <div>
-        <WeatherSection 
-        data={data}
-        setIsCelsius={setIsCelsius}
-        isCelsius={isCelsius}
-        count={count}
-        />
-        <WeatherForecast 
-        data={forecastData} 
-        isCelsius={isCelsius}
-        />
-        
         </div>
-         : 
-        ""}
+      ) : (
+        isSubmitted && data && (
+          <div>
+            <WeatherSection 
+              data={data}
+              setIsCelsius={setIsCelsius}
+              isCelsius={isCelsius}
+            />
+            <WeatherForecast 
+              data={forecastData} 
+              isCelsius={isCelsius}
+            />
+          </div>
+        )
+      )}
 
       <DarkModeToggle
-      isDarkMode={isDarkMode}
-      setIsDarkMode={setIsDarkMode}
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
       />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
