@@ -3,7 +3,7 @@
 .App {
     .weather-data-section {
         // background: rgba(255, 255, 255, 1);
-        background-color: red;
+        background: rgba(255, 255, 255, 0.2);
         width: 100%;
         margin: 0 auto;
         border-radius: 10px;
@@ -24,7 +24,6 @@
             .weather-info-item {
                 text-align: center;
                 padding: 1em 2em;
-                // background: #fff;
                 border-radius: $layout-border-radius;
                 
                 border-radius: 10px;
