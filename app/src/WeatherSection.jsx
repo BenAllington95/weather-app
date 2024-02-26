@@ -58,6 +58,7 @@ export default function WeatherSection(props) {
     return (
         <div className="weather-data-section">
             <div className="weather-data-location">
+                <div className="weather-data-location-heading-container">
                 <h1 className="weather-data-location-title">{props.data.name}</h1>  
                 {isLoading ?
                     <FaSpinner className="spinner" size={20} />   
@@ -69,8 +70,9 @@ export default function WeatherSection(props) {
                         countryCode={props.data.country} 
                     />
                 }
-            </div>
+                </div>
             <p className="weather-data-time">{formatDate(props.data.dt)}</p> {/* Display the formatted date/time */}
+            </div>
 
             <div className="weather-data-temperature">
                 <img className="weather-data-img" src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@4x.png`} alt="Weather-icon" />

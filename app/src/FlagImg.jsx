@@ -5,8 +5,7 @@ function FlagImage(props) {
   const style={
     borderRadius: "5px",
     objectFit: "cover",
-    objectPosition: "center"
-  
+    objectPosition: "center"  
   }
 
   return (

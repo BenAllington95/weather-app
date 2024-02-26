@@ -51,12 +51,19 @@
             }
         }
 
+        .weather-data-location-heading-container {
+            display: flex;
+            align-items: baseline;
+            gap: 3px;
+        }
+
         .weather-data-location {
             display: flex;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 3px;
             width: 100%;
-            align-items: baseline;
 
            
             

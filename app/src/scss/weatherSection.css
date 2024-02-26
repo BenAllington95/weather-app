@@ -39,12 +39,18 @@
   color: #697384;
   font-size: 0.9rem;
 }
+.App .weather-data-section .weather-data-location-heading-container {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
 .App .weather-data-section .weather-data-location {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 3px;
   width: 100%;
-  align-items: baseline;
 }
 .App .weather-data-section .weather-data-location .weather-data-location-title {
   font-size: 2.5rem;
