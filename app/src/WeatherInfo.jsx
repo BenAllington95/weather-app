@@ -2,14 +2,6 @@ import React from 'react';
 
 function WeatherInfo(props) {
 
-    // function convertCelsiusToFahrenheit(celsius) {
-    //     const fahrenheit = (celsius * 9/5) + 32;
-    //     return Math.round(fahrenheit);
-    //   }
-
-    console.log(props.data)
-    console.log(props.data.temp_min)
-
     function tempConversion(boolean, celsius) {
         const fahrenheit = (celsius * 9/5) + 32;
         const symbol = boolean ? '°C' : '°F'
@@ -47,9 +39,5 @@ function WeatherInfo(props) {
     </div>
   );
 }
-
-// <p>Feels Like {tempConversion(props.isCelsius, props.data.feelsLike)}</p>
-// <p>Min {tempConversion(props.isCelsius, props.data.minTemp)}</p>
-// <p>Max {tempConversion(props.isCelsius, props.data.maxTemp)}</p>
 
 export default WeatherInfo;

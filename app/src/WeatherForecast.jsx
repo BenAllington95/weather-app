@@ -1,5 +1,7 @@
 export default function WeatherForecast(props) {
 
+    console.log(props)
+
     function tempConversion(boolean, celsius) {
         const fahrenheit = (celsius * 9/5) + 32;
         const symbol = boolean ? '°C' : '°F'

@@ -112,6 +112,9 @@
   max-width: 700px;
   margin-bottom: 1em;
 }
+.App .weather-data-section .weather-data-time {
+  color: #697384;
+}
 .App .weather-data-section .weather-info-section {
   display: flex;
   flex-wrap: wrap;
