@@ -22,7 +22,7 @@ export default function WeatherForecast(props) {
         const dateFormatted = `${date.getDate()}/${date.getMonth() + 1}`; // Format the date as "dd/mm"
         return (
             <div className="weather-forecast-item" key={`item${index}`}>
-                <h3 className="weather-forecast-item-heading">{`${dayString.slice(0,3)} - ${dateFormatted}`}</h3>
+                <p className="weather-forecast-item-heading">{`${dayString.slice(0,3)}`}</p>
                 <img className="weather-forecast-img" src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`} alt="Weather icon" />
                 <p className="weather-forecast-item-temperature">{tempConversion(props.isCelsius, item.main.temp)}</p>
             </div>
