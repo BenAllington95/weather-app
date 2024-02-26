@@ -18,7 +18,8 @@
   justify-content: center;
   gap: 5px;
   margin-left: 1em;
-  opacity: 0.5;
+  opacity: 1;
+  color: #171C24;
 }
 .weather-forecast .weather-forecast-heading-items ion-icon[name=calendar-outline] {
   font-size: 1.2rem;
@@ -29,7 +30,6 @@
   }
 }
 .weather-forecast .weather-forecast-heading-items .weather-forecast-heading {
-  color: #171C24;
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
@@ -88,7 +88,6 @@
 }
 .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-temperature {
   color: #171C24;
-  font-weight: bold;
 }
 @media (max-width: 768px) {
   .weather-forecast .weather-forecast-items .weather-forecast-item .weather-forecast-item-temperature {

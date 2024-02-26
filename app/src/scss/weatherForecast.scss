@@ -20,7 +20,8 @@
         justify-content: center;
         gap: 5px;
         margin-left: 1em;
-        opacity: 0.5;
+        opacity: 1;
+        color: $text-color;
         
         
         ion-icon[name="calendar-outline"]{
@@ -32,7 +33,6 @@
         }
 
         .weather-forecast-heading {
-            color: $text-color;
             font-size: 1.2rem;
 
             @media (max-width: 768px) {
@@ -100,8 +100,7 @@
 
             .weather-forecast-item-temperature {
                 color: $text-color;
-                font-weight: bold;
-                
+
                 @media (max-width: 768px) {
                     width: 30%;
                     // background: red;
@@ -111,9 +110,6 @@
                 
                 
             }
-
-
-
 
             .weather-forecast-img {
                 height: 80px;
